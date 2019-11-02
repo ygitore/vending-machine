@@ -5,7 +5,7 @@ import authData from './helpers/data/authData';
 import myNavbar from './components/myNavbar/myNavbar';
 
 import apiKeys from './helpers/apiKeys.json';
-
+import machine from './components/Machine/machine';
 import '../styles/main.scss';
 
 const init = () => {
@@ -13,6 +13,7 @@ const init = () => {
   authData.checkLoginStatus();
   auth.loginButton();
   myNavbar.logoutEvent();
+  machine.buildTheMachine();
 };
 
 init();
