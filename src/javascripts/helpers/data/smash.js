@@ -1,10 +1,20 @@
 import machineData from './mchineData';
 import positionData from './positionData';
+import snackPositionData from './snackPositionData';
+import snackData from './snackData';
 
 const getCompleteMachine = () => new Promise((resolve, reject) => {
   machineData.getMachine()
     .then((singleMachine) => positionData.getAllPositionsByMachineId(singleMachine.id))
-    .then((positions) => resolve(positions))
+    .then((positions) => {
+      snackPositionData.getAllSnackPositionsByMachineId(positions[0].machineId)
+        .then((snackPosition) => {
+          snackData.getSnacksByUid(positions[0].uid).then((snacks) => {
+            console.log('snacksPositions', snackPosition);
+            resolve(snacks);
+          });
+        });
+    })
     .catch((err) => reject(err));
   // to start of we need machineid. can't do anything unless we have machine data
   // 1. getMachines -returns first machine (hard coding)
