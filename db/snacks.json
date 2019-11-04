@@ -9,7 +9,7 @@
     },
     "snack2":{
         "imageUrl":"https://www.myfussyeater.com/wp-content/uploads/2018/11/Organix-Adults-Kids-Snacks_002.jpg",
-        "name":"rt",
+        "name":"Whole Pickle",
         "price":75,
         "currentStocked":12,
         "lifetimeNum":4,
@@ -17,7 +17,7 @@
     },
     "snack3":{
         "imageUrl":"https://i.pinimg.com/originals/53/bb/e9/53bbe918c3bc70ff8c712163553bf0f9.jpg",
-        "name":"sl",
+        "name":"Sour Patch",
         "price":75,
         "currentStocked":12,
         "lifetimeNum":4,
@@ -25,7 +25,7 @@
     },
     "snack4":{
         "imageUrl":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1565967633-healthy-snacks-for-kids-on-the-go-plantain-chips-1565967611.jpg",
-        "name":"tt",
+        "name":"Nutter Butter",
         "price":75,
         "currentStocked":12,
         "lifetimeNum":4,
@@ -33,7 +33,7 @@
     },
     "snack5":{
         "imageUrl":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1565967633-healthy-snacks-for-kids-on-the-go-plantain-chips-1565967611.jpg",
-        "name":"am",
+        "name":"Chocolate Chip",
         "price":75,
         "currentStocked":12,
         "lifetimeNum":4,
