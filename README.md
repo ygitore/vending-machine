@@ -1,6 +1,6 @@
-# vending-machine
+# Vending-Machine
 ## Description
-created application that allows users to login using google authentication
+created application that allows users login using google authentication. Once user is logged in they can see the details of snacks name, location, price and image in vending machine
 ### Technologies used
 * Html5, CSS3, Javascript
 * Firebase 7.2.3
