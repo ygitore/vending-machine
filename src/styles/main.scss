@@ -1,8 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 
-body{
-    background-color: rgb(116, 133, 146);
+body {
+  background-color: rgb(134, 170, 187);
 }
+
 .hide {
-    display: none;
+  display: none;
 }
+
+img {
+  height: 100px;
+  width: 200px;
+};
