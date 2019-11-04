@@ -2,6 +2,7 @@ import axios from 'axios';
 import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
+
 const getSnacksByUid = (uid) => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/snacks.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
@@ -11,8 +12,9 @@ const getSnacksByUid = (uid) => new Promise((resolve, reject) => {
         demSnacks[fbId].id = fbId;
         snacks.push(demSnacks[fbId]);
       });
-      resolve(snacks);
+      resolve(snacks); // Hard code to only return first machine that comes back
     })
-    .catch((err) => reject(err));
+    .catch((error) => reject(error));
 });
+
 export default { getSnacksByUid };
