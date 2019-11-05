@@ -7,6 +7,7 @@ const getMachine = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/machines.json`)
     .then((response) => {
       const demMachines = response.data;
+      console.log(demMachines);
       const machines = [];
       Object.keys(demMachines).forEach((fbId) => {
         demMachines[fbId].id = fbId;
