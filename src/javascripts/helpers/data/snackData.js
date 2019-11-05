@@ -12,7 +12,7 @@ const getSnacksByUid = (uid) => new Promise((resolve, reject) => {
         demSnacks[fbId].id = fbId;
         snacks.push(demSnacks[fbId]);
       });
-      resolve(snacks); // Hard code to only return first machine that comes back
+      resolve(snacks);
     })
     .catch((error) => reject(error));
 });

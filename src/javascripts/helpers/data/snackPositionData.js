@@ -12,9 +12,13 @@ const getAllSnackPositionsByMachineId = (machineId) => new Promise((resolve, rej
         demSnackPositions[fbId].id = fbId;
         snackPositions.push(demSnackPositions[fbId]);
       });
-      resolve(snackPositions); // Hard code to only return first machine that comes back
+      resolve(snackPositions);
     })
     .catch((error) => reject(error));
 });
 
-export default { getAllSnackPositionsByMachineId };
+const deleteSnackPosition = (snackPositionId) => axios.delete(`${baseUrl}/snackPositions/${snackPositionId}.json`);
+
+const createSnackPosition = (newSnackPosition) => axios.post(`${baseUrl}/snackPositions.json`, newSnackPosition);
+
+export default { getAllSnackPositionsByMachineId, deleteSnackPosition, createSnackPosition };
