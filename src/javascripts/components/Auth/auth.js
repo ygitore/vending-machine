@@ -1,9 +1,9 @@
-
 import $ from 'jquery';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import util from '../../helpers/utilities';
-import monkeyButt from './googleLogin.png';
+
+import monkeyBut from './googlebutton.png';
+import utilities from '../../helpers/utilities';
 
 const signMeIn = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -12,9 +12,10 @@ const signMeIn = () => {
 
 const loginButton = () => {
   const domString = `<button id="google-auth" class="btn btn-danger">
-  <img src="${monkeyButt}" />
+    <img src=${monkeyBut} />
   </button>`;
-  util.printToDom('auth', domString);
+
+  utilities.printToDom('auth', domString);
   $('#google-auth').click(signMeIn);
 };
 
