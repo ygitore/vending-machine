@@ -7,6 +7,7 @@ const getAllPositionsByMachineId = (machineId) => new Promise((resolve, reject) 
   axios.get(`${baseUrl}/positions.json?orderBy="machineId"&equalTo="${machineId}"`)
     .then((response) => {
       const demPositions = response.data;
+      console.log('where is id from --> ', demPositions);
       const positions = [];
       Object.keys(demPositions).forEach((fbId) => {
         demPositions[fbId].id = fbId;
