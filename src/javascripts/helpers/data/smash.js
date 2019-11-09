@@ -13,6 +13,7 @@ const getCompleteMachine = () => new Promise((resolve, reject) => {
   machineData.getMachine()
     .then((singleMachine) => positionData.getAllPositionsByMachineId(singleMachine.id))
     .then((positions) => {
+      console.log('posi', positions);
       snackPositionData.getAllSnackPositionsByMachineId(positions[0].machineId)
         .then((snackPositions) => {
           snackData.getSnacksByUid(positions[0].uid).then((snacks) => {
@@ -38,7 +39,9 @@ const getCompleteMachine = () => new Promise((resolve, reject) => {
 const getSnacksWithPositions = (uid) => new Promise((resolve, reject) => {
   machineData.getMachine()
     .then((singleMachine) => positionData.getAllPositionsByMachineId(singleMachine.id))
+    // why we nested this part?
     .then((positions) => {
+      // positions[0].machineId is to get machine id
       snackPositionData.getAllSnackPositionsByMachineId(positions[0].machineId)
         .then((snackPositions) => {
           snackData.getSnacksByUid(uid).then((snacks) => {

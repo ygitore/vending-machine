@@ -89,7 +89,7 @@ const buildTheStocker = (uid) => {
       domString += `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
       Add Snack
     </button>`;
-      domString += '<div class="d-flex flex-wrap">';
+      domString += '<div class="d-flex flex-wrap bg-dark-gray">';
       snacks.forEach((snack) => {
         domString += stockCard.makeASnack(snack);
       });
